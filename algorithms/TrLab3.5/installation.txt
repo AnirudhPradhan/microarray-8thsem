@@ -1,0 +1,11 @@
+INSTALLATION NOTE:
+
+The application and all its files and folders must be in the TrLab directory.
+
+The TrLab directory can be placed wherever you want.
+
+EXECUTION OF THE APPLICATION:
+
+From Operating System Interface (Mac OS, Windows): Double click on TrLabApp.jar
+
+From Operating System Terminal (Mac OS, Linux, Windows): java -jar /path/to/the/jar/TrLabApp.jar

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<trigen>
+<dataset description="Ant second dataset - no biological analysis" geneSize="18" id="0012" maxC="4" maxG="18" maxT="3" minC="2" minG="3" minT="3" name="antSecond" organism="" sampleSize="4" timeSize="3" type="e">
+	<resources separator=";">
+		<resource>ant_t0.csv</resource>
+		<resource>ant_t1.csv</resource>
+		<resource>ant_t2.csv</resource>
+	</resources>
+	<genes>genes.txt</genes>
+	<samples>samples.txt</samples>
+	<times>times.txt</times>
+</dataset>
+</trigen>

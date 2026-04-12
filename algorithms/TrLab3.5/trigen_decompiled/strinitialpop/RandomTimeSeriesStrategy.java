@@ -1,0 +1,55 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package strinitialpop;
+
+import algcore.AlgorithmConfiguration;
+import algcore.AlgorithmDataset;
+import algcore.AlgorithmIndividual;
+import algutils.AlgorithmRandomUtilities;
+import algutils.TriclusterUtilities;
+import initialpops.InitialPopStrategy;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
+public class RandomTimeSeriesStrategy
+implements InitialPopStrategy {
+    @Override
+    public List<AlgorithmIndividual> generateIndividuals(int numberOfIndividuals, String individualClassName) {
+        AlgorithmRandomUtilities ALEATORIOS = AlgorithmRandomUtilities.getInstance();
+        AlgorithmConfiguration PARAM = AlgorithmConfiguration.getInstance();
+        AlgorithmDataset DATOS = PARAM.getData();
+        LinkedList<AlgorithmIndividual> l = new LinkedList<AlgorithmIndividual>();
+        for (int n = 0; n < numberOfIndividuals; ++n) {
+            int numeroGenes = ALEATORIOS.getFromInterval(PARAM.getMinG(), PARAM.getMaxG());
+            int numeroCondiciones = ALEATORIOS.getFromInterval(PARAM.getMinC(), PARAM.getMaxC());
+            int numeroTiempos = ALEATORIOS.getFromInterval(PARAM.getMinT(), PARAM.getMaxT());
+            Collection<Integer> g = TriclusterUtilities.getInstance().getDispersedRandomComponent(numeroGenes, DATOS.getGenesBag());
+            Collection<Integer> c2 = TriclusterUtilities.getInstance().getDispersedRandomComponent(numeroCondiciones, DATOS.getSamplesBag());
+            int coordenadaTiempo = ALEATORIOS.getFromInterval(0, DATOS.getTimeSize() - 1);
+            Collection<Integer> t = TriclusterUtilities.getInstance().getIntervalComponent(coordenadaTiempo, numeroTiempos, DATOS.getTimeSize());
+            AlgorithmIndividual nuevo = null;
+            try {
+                nuevo = (AlgorithmIndividual)Class.forName(individualClassName).newInstance();
+                nuevo.initialize(g, c2, t);
+                nuevo.addEntry("from initial population: random");
+                l.add(nuevo);
+                continue;
+            }
+            catch (InstantiationException e) {
+                e.printStackTrace();
+                continue;
+            }
+            catch (IllegalAccessException e) {
+                e.printStackTrace();
+                continue;
+            }
+            catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        return l;
+    }
+}
+

@@ -1,0 +1,167 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package org.apache.commons.math3.optim.univariate;
+
+import org.apache.commons.math3.exception.NotStrictlyPositiveException;
+import org.apache.commons.math3.exception.NumberIsTooSmallException;
+import org.apache.commons.math3.optim.ConvergenceChecker;
+import org.apache.commons.math3.optim.nonlinear.scalar.GoalType;
+import org.apache.commons.math3.optim.univariate.UnivariateOptimizer;
+import org.apache.commons.math3.optim.univariate.UnivariatePointValuePair;
+import org.apache.commons.math3.util.FastMath;
+import org.apache.commons.math3.util.Precision;
+
+/*
+ * This class specifies class file version 49.0 but uses Java 6 signatures.  Assumed Java 6.
+ */
+public class BrentOptimizer
+extends UnivariateOptimizer {
+    private static final double GOLDEN_SECTION = 0.5 * (3.0 - FastMath.sqrt(5.0));
+    private static final double MIN_RELATIVE_TOLERANCE = 2.0 * FastMath.ulp(1.0);
+    private final double relativeThreshold;
+    private final double absoluteThreshold;
+
+    public BrentOptimizer(double rel, double abs, ConvergenceChecker<UnivariatePointValuePair> checker) {
+        super(checker);
+        if (rel < MIN_RELATIVE_TOLERANCE) {
+            throw new NumberIsTooSmallException(rel, (Number)MIN_RELATIVE_TOLERANCE, true);
+        }
+        if (abs <= 0.0) {
+            throw new NotStrictlyPositiveException(abs);
+        }
+        this.relativeThreshold = rel;
+        this.absoluteThreshold = abs;
+    }
+
+    public BrentOptimizer(double rel, double abs) {
+        this(rel, abs, null);
+    }
+
+    @Override
+    protected UnivariatePointValuePair doOptimize() {
+        UnivariatePointValuePair current;
+        double x;
+        double b2;
+        double a2;
+        boolean isMinim = this.getGoalType() == GoalType.MINIMIZE;
+        double lo = this.getMin();
+        double mid = this.getStartValue();
+        double hi = this.getMax();
+        ConvergenceChecker<UnivariatePointValuePair> checker = this.getConvergenceChecker();
+        if (lo < hi) {
+            a2 = lo;
+            b2 = hi;
+        } else {
+            a2 = hi;
+            b2 = lo;
+        }
+        double v = x = mid;
+        double w = x;
+        double d = 0.0;
+        double e = 0.0;
+        double fx = this.computeObjectiveValue(x);
+        if (!isMinim) {
+            fx = -fx;
+        }
+        double fv = fx;
+        double fw = fx;
+        UnivariatePointValuePair previous = null;
+        UnivariatePointValuePair best = current = new UnivariatePointValuePair(x, isMinim ? fx : -fx);
+        int iter = 0;
+        while (true) {
+            boolean stop;
+            double m = 0.5 * (a2 + b2);
+            double tol1 = this.relativeThreshold * FastMath.abs(x) + this.absoluteThreshold;
+            double tol2 = 2.0 * tol1;
+            boolean bl = stop = FastMath.abs(x - m) <= tol2 - 0.5 * (b2 - a2);
+            if (!stop) {
+                double p = 0.0;
+                double q = 0.0;
+                double r = 0.0;
+                double u = 0.0;
+                if (FastMath.abs(e) > tol1) {
+                    r = (x - w) * (fx - fv);
+                    q = (x - v) * (fx - fw);
+                    p = (x - v) * q - (x - w) * r;
+                    if ((q = 2.0 * (q - r)) > 0.0) {
+                        p = -p;
+                    } else {
+                        q = -q;
+                    }
+                    r = e;
+                    e = d;
+                    if (p > q * (a2 - x) && p < q * (b2 - x) && FastMath.abs(p) < FastMath.abs(0.5 * q * r)) {
+                        d = p / q;
+                        u = x + d;
+                        if (u - a2 < tol2 || b2 - u < tol2) {
+                            d = x <= m ? tol1 : -tol1;
+                        }
+                    } else {
+                        e = x < m ? b2 - x : a2 - x;
+                        d = GOLDEN_SECTION * e;
+                    }
+                } else {
+                    e = x < m ? b2 - x : a2 - x;
+                    d = GOLDEN_SECTION * e;
+                }
+                u = FastMath.abs(d) < tol1 ? (d >= 0.0 ? x + tol1 : x - tol1) : x + d;
+                double fu = this.computeObjectiveValue(u);
+                if (!isMinim) {
+                    fu = -fu;
+                }
+                previous = current;
+                current = new UnivariatePointValuePair(u, isMinim ? fu : -fu);
+                best = this.best(best, this.best(previous, current, isMinim), isMinim);
+                if (checker != null && checker.converged(iter, previous, current)) {
+                    return best;
+                }
+                if (fu <= fx) {
+                    if (u < x) {
+                        b2 = x;
+                    } else {
+                        a2 = x;
+                    }
+                    v = w;
+                    fv = fw;
+                    w = x;
+                    fw = fx;
+                    x = u;
+                    fx = fu;
+                } else {
+                    if (u < x) {
+                        a2 = u;
+                    } else {
+                        b2 = u;
+                    }
+                    if (fu <= fw || Precision.equals(w, x)) {
+                        v = w;
+                        fv = fw;
+                        w = u;
+                        fw = fu;
+                    } else if (fu <= fv || Precision.equals(v, x) || Precision.equals(v, w)) {
+                        v = u;
+                        fv = fu;
+                    }
+                }
+            } else {
+                return this.best(best, this.best(previous, current, isMinim), isMinim);
+            }
+            ++iter;
+        }
+    }
+
+    private UnivariatePointValuePair best(UnivariatePointValuePair a2, UnivariatePointValuePair b2, boolean isMinim) {
+        if (a2 == null) {
+            return b2;
+        }
+        if (b2 == null) {
+            return a2;
+        }
+        if (isMinim) {
+            return a2.getValue() <= b2.getValue() ? a2 : b2;
+        }
+        return a2.getValue() >= b2.getValue() ? a2 : b2;
+    }
+}
+

@@ -1,0 +1,49 @@
+Parse obo file
+Feb 19, 2026 10:51:54 PM ontologizer.go.OBOParser doParse
+INFO: Got 44797 terms and 89766 relations
+Details of parsed obo file:
+  filename:		D:\8th sem\TrLab3.5\resources\terms\go-basic.obo
+  date:			23:05:2016 15:18
+  format:		1.2
+  term definitions:	44797
+Building graph
+Feb 19, 2026 10:51:54 PM ontologizer.go.GOGraph <init>
+INFO: Ontology contains multiple level-one terms: "molecular_function" ,"cellular_component" ,"biological_process". Adding artificial root term.
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset d:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOnames\genes_1.txt
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset d:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOnames\genes_2.txt
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset d:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOnames\genes_3.txt
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset d:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOnames\genes_4.txt
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset d:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOnames\genes_5.txt
+Feb 19, 2026 10:51:54 PM ontologizer.StudySetFactory createFromFile
+INFO: Processing studyset D:\8th sem\TrLab3.5\resources\0001\yeast_genes.txt
+Feb 19, 2026 10:51:55 PM ontologizer.association.AssociationParser importAssociationFile
+INFO: 98250 associations parsed, 92367 of which were kept while 0 malformed lines had to be ignored.
+Feb 19, 2026 10:51:55 PM ontologizer.association.AssociationParser importAssociationFile
+INFO: A further 5883 associations were skipped due to various reasons whereas 0 of those referred to obsolete terms.
+Feb 19, 2026 10:51:55 PM ontologizer.association.AssociationParser importAssociationFile
+INFO: A total of 5546 terms are directly associated.
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: Writing to "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_1-Term-For-Term-Bonferroni.txt".
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_1-Term-For-Term-Bonferroni.txt" successfully written.
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: Writing to "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_2-Term-For-Term-Bonferroni.txt".
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_2-Term-For-Term-Bonferroni.txt" successfully written.
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: Writing to "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_3-Term-For-Term-Bonferroni.txt".
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_3-Term-For-Term-Bonferroni.txt" successfully written.
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: Writing to "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_4-Term-For-Term-Bonferroni.txt".
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_4-Term-For-Term-Bonferroni.txt" successfully written.
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: Writing to "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_5-Term-For-Term-Bonferroni.txt".
+Feb 19, 2026 10:51:56 PM ontologizer.calculation.EnrichedGOTermsResult writeTable
+INFO: "D:\8th sem\TrLab3.5\resources\yeast_run\temp-yeast_run-GOtables\table-genes_5-Term-For-Term-Bonferroni.txt" successfully written.

@@ -1,0 +1,17 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package org.slf4j.helpers;
+
+public class Util {
+    public static final void report(String msg, Throwable t) {
+        System.err.println(msg);
+        System.err.println("Reported exception:");
+        t.printStackTrace();
+    }
+
+    public static final void report(String msg) {
+        System.err.println("SLF4J: " + msg);
+    }
+}
+

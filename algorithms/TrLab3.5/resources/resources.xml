@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><trigen>
+
+<dataset description="Complete Saccharomyces Cerevisae experiment" geneSize="6178" id="0001" maxC="4" maxG="200" maxT="8" minC="2" minG="15" minT="3" name="yeast" organism="Yeast" sampleSize="4" timeSize="14" type="b">
+	<resources separator=";">
+		<resource>yeast_t0.csv</resource>
+		<resource>yeast_t1.csv</resource>
+		<resource>yeast_t2.csv</resource>
+		<resource>yeast_t3.csv</resource>
+		<resource>yeast_t4.csv</resource>
+		<resource>yeast_t5.csv</resource>
+		<resource>yeast_t6.csv</resource>
+		<resource>yeast_t7.csv</resource>
+		<resource>yeast_t8.csv</resource>
+		<resource>yeast_t9.csv</resource>
+		<resource>yeast_t10.csv</resource>
+		<resource>yeast_t11.csv</resource>
+		<resource>yeast_t12.csv</resource>
+		<resource>yeast_t13.csv</resource>
+	</resources>
+	<genes>yeast_genes.txt</genes>
+	<samples>yeast_samples.txt</samples>
+	<times>yeast_times.txt</times>
+</dataset>
+
+<dataset description="Yeast Elutriation experiment" geneSize="7744" id="0002" maxC="5" maxG="200" maxT="8" minC="2" minG="15" minT="3" name="elutriation" organism="Yeast" sampleSize="13" timeSize="14" type="b">
+	<resources separator=";">
+		<resource>elutriation_t00.csv</resource>
+		<resource>elutriation_t30.csv</resource>
+		<resource>elutriation_t60.csv</resource>
+		<resource>elutriation_t90.csv</resource>
+		<resource>elutriation_t120.csv</resource>
+		<resource>elutriation_t150.csv</resource>
+		<resource>elutriation_t180.csv</resource>
+		<resource>elutriation_t210.csv</resource>
+		<resource>elutriation_t240.csv</resource>
+		<resource>elutriation_t270.csv</resource>
+		<resource>elutriation_t300.csv</resource>
+		<resource>elutriation_t330.csv</resource>
+		<resource>elutriation_t360.csv</resource>
+		<resource>elutriation_t390.csv</resource>
+	</resources>
+	<genes>elutriation_genes.txt</genes>
+	<samples>elutriation_samples.txt</samples>
+	<times>elutriation_times.txt</times>
+</dataset>
+
+<dataset description="GEO Omnibus GDS4510 experiment" geneSize="22690" id="0003" maxC="5" maxG="200" maxT="4" minC="2" minG="15" minT="3" name="gds4510" organism="Mouse" sampleSize="8" timeSize="4" type="b">
+	<resources separator=",">
+		<resource>gds4510_t2.csv</resource>
+		<resource>gds4510_t4.csv</resource>
+		<resource>gds4510_t6.csv</resource>
+		<resource>gds4510_t8.csv</resource>
+	</resources>
+	<genes>gds4510_genes.txt</genes>
+	<samples>gds4510_samples.txt</samples>
+	<times>gds4510_times.txt</times>
+</dataset>
+
+<dataset description="GEO Omnibus GDS4472 experiment" geneSize="54675" id="0004" maxC="4" maxG="200" maxT="6" minC="2" minG="15" minT="3" name="gds4472" organism="Human" sampleSize="4" timeSize="6" type="b">
+	<resources separator=",">
+		<resource>gds4472_t0.csv</resource>
+		<resource>gds4472_t8.csv</resource>
+		<resource>gds4472_t16.csv</resource>
+		<resource>gds4472_t24.csv</resource>
+		<resource>gds4472_t48.csv</resource>
+		<resource>gds4472_t96.csv</resource>
+	</resources>
+	<genes>gds4472_genes.txt</genes>
+	<samples>gds4472_samples.txt</samples>
+	<times>gds4472_times.txt</times>
+</dataset>
+
+<dataset description="GEO Omnibus GDS4262 experiment" geneSize="54675" id="0005" maxC="5" maxG="200" maxT="4" minC="2" minG="15" minT="3" name="gds4262" organism="Human" sampleSize="12" timeSize="4" type="b">
+	<resources separator=",">
+		<resource>gds4262_t2.csv</resource>
+		<resource>gds4262_t6.csv</resource>
+		<resource>gds4262_t12.csv</resource>
+		<resource>gds4262_t24.csv</resource>
+	</resources>
+	<genes>gds4262_genes.txt</genes>
+	<samples>gds4262_samples.txt</samples>
+	<times>gds4262_times.txt</times>
+</dataset>
+
+<dataset description="GEO Omnibus GDS4442 experiment" geneSize="45101" id="0006" maxC="5" maxG="200" maxT="3" minC="2" minG="15" minT="3" name="gds4442" organism="Mouse" sampleSize="6" timeSize="3" type="b">
+	<resources separator=",">
+		<resource>gds4442_t12.csv</resource>
+		<resource>gds4442_t24.csv</resource>
+		<resource>gds4442_t48.csv</resource>
+	</resources>
+	<genes>gds4442_genes.txt</genes>
+	<samples>gds4442_samples.txt</samples>
+	<times>gds4442_times.txt</times>
+</dataset>
+
+<dataset description="GEO Omnibus GSE4324 experiment" geneSize="22690" id="0007" maxC="5" maxG="200" maxT="4" minC="2" minG="15" minT="3" name="gse4324" organism="Mouse" sampleSize="12" timeSize="4" type="b">
+	<resources separator=";">
+		<resource>gse4324_0d.csv</resource>
+		<resource>gse4324_3d.csv</resource>
+		<resource>gse4324_7d.csv</resource>
+		<resource>gse4324_14d.csv</resource>
+	</resources>
+	<genes>gse4324_genes.txt</genes>
+	<samples>gse4324_samples.txt</samples>
+	<times>gse4324_times.txt</times>
+</dataset>
+
+<dataset description="Complete earthquake dataset" geneSize="18" id="0008" maxC="5" maxG="18" maxT="8" minC="2" minG="2" minT="3" name="earthquake" organism="None" sampleSize="12" timeSize="8" type="e">
+	<resources separator=";">
+		<resource>earthquake_counter.csv</resource>
+		<resource>earthquake_35.csv</resource>
+		<resource>earthquake_40.csv</resource>
+		<resource>earthquake_45.csv</resource>
+		<resource>earthquake_50.csv</resource>
+		<resource>earthquake_max.csv</resource>
+		<resource>earthquake_lat.csv</resource>
+		<resource>earthquake_lon.csv</resource>
+	</resources>
+	<genes>earthquake_genes.txt</genes>
+	<samples>earthquake_samples.txt</samples>
+	<times>earthquake_times.txt</times>
+</dataset>
+
+<dataset description="Ant dataset log 10" geneSize="22" id="0009" maxC="4" maxG="22" maxT="3" minC="2" minG="20" minT="3" name="antLog10" organism="" sampleSize="4" timeSize="3" type="e"><resources separator=";"><resource>log10_worker.csv</resource><resource>log10_male.csv</resource><resource>log10_female.csv</resource></resources><genes>log10_genes.txt</genes><samples>log10_samples.txt</samples><times>log10_times.txt</times>
+</dataset>
+<dataset description="Ant dataset quartile" geneSize="22" id="0010" maxC="4" maxG="22" maxT="3" minC="2" minG="20" minT="3" name="antQuartile" organism="" sampleSize="4" timeSize="3" type="e"><resources separator=";"><resource>quartile_worker_t0.csv</resource><resource>quartile_male_t1.csv</resource><resource>quartile_female_t2.csv</resource></resources><genes>quartile_genes.txt</genes><samples>quartile_samples.txt</samples><times>quartile_times.txt</times>
+</dataset>
+<dataset description="Ant dataset original" geneSize="22" id="0011" maxC="4" maxG="22" maxT="3" minC="2" minG="20" minT="3" name="antOriginal" organism="" sampleSize="4" timeSize="3" type="e"><resources separator=";"><resource>original_worker_t0.csv</resource><resource>original_male_t1.csv</resource><resource>original_female_t2.csv</resource></resources><genes>original_genes.txt</genes><samples>original_samples.txt</samples><times>original_times.txt</times>
+</dataset>
+<dataset description="Ant second dataset" geneSize="18" id="0012" maxC="4" maxG="18" maxT="3" minC="2" minG="3" minT="3" name="antSecond" organism="" sampleSize="4" timeSize="3" type="e"><resources separator=";"><resource>ant_t0.csv</resource><resource>ant_t1.csv</resource><resource>ant_t2.csv</resource></resources><genes>genes.txt</genes><samples>samples.txt</samples><times>times.txt</times>
+</dataset>
+
+<dataset description="Milho pixels" geneSize="584" id="0014" maxC="593" maxG="584" maxT="18" minC="20" minG="20" minT="3" name="milho-pixels" organism="" sampleSize="593" timeSize="19" type="e">
+	<resources separator=";">
+		<resource>milho_t00.csv</resource>
+		<resource>milho_t01.csv</resource>
+		<resource>milho_t02.csv</resource>
+		<resource>milho_t03.csv</resource>
+		<resource>milho_t04.csv</resource>
+		<resource>milho_t05.csv</resource>
+		<resource>milho_t06.csv</resource>
+		<resource>milho_t07.csv</resource>
+		<resource>milho_t08.csv</resource>
+		<resource>milho_t09.csv</resource>
+		<resource>milho_t10.csv</resource>
+		<resource>milho_t11.csv</resource>
+		<resource>milho_t12.csv</resource>
+		<resource>milho_t13.csv</resource>
+		<resource>milho_t14.csv</resource>
+		<resource>milho_t15.csv</resource>
+		<resource>milho_t16.csv</resource>
+		<resource>milho_t17.csv</resource>
+		<resource>milho_t18.csv</resource>
+	</resources>
+	<genes>milho_genes.txt</genes>
+	<samples>milho_samples.txt</samples>
+	<times>milho_times.txt</times>
+</dataset>
+
+<dataset description="Milho pixels 10 cell reduced" geneSize="58" id="0015" maxC="59" maxG="58" maxT="18" minC="10" minG="10" minT="3" name="milho-pixels-10" organism="" sampleSize="59" timeSize="19" type="e">
+	<resources separator=";">
+		<resource>milho10_t00.csv</resource>
+		<resource>milho10_t01.csv</resource>
+		<resource>milho10_t02.csv</resource>
+		<resource>milho10_t03.csv</resource>
+		<resource>milho10_t04.csv</resource>
+		<resource>milho10_t05.csv</resource>
+		<resource>milho10_t06.csv</resource>
+		<resource>milho10_t07.csv</resource>
+		<resource>milho10_t08.csv</resource>
+		<resource>milho10_t09.csv</resource>
+		<resource>milho10_t10.csv</resource>
+		<resource>milho10_t11.csv</resource>
+		<resource>milho10_t12.csv</resource>
+		<resource>milho10_t13.csv</resource>
+		<resource>milho10_t14.csv</resource>
+		<resource>milho10_t15.csv</resource>
+		<resource>milho10_t16.csv</resource>
+		<resource>milho10_t17.csv</resource>
+		<resource>milho10_t18.csv</resource>
+	</resources>
+	<genes>milho10_genes.txt</genes>
+	<samples>milho10_samples.txt</samples>
+	<times>milho10_times.txt</times>
+</dataset>
+
+<dataset description="andorra29" geneSize="17" id="0016" maxC="27" maxG="17" maxT="7" minC="2" minG="3" minT="3" name="andorra29" organism="" sampleSize="27" timeSize="7" type="e">
+	<resources separator=";">
+		<resource>andorra29_t0_mmax.csv</resource>
+		<resource>andorra29_t1_deptg.csv</resource>
+		<resource>andorra29_t2_45.csv</resource>
+		<resource>andorra29_t3_40.csv</resource>
+		<resource>andorra29_t4_35.csv</resource>
+		<resource>andorra29_t5_30.csv</resource>
+		<resource>andorra29_t6_tot.csv</resource>
+	</resources>
+	<genes>Y_andorra29.txt</genes>
+	<samples>X_andorra29.txt</samples>
+	<times>F_andorra29.txt</times>
+</dataset>
+
+<dataset description="andorra30" geneSize="17" id="0017" maxC="27" maxG="17" maxT="7" minC="2" minG="3" minT="3" name="andorra30" organism="" sampleSize="27" timeSize="7" type="e">
+	<resources separator=";">
+		<resource>andorra30_t0_mmax.csv</resource>
+		<resource>andorra30_t1_deptg.csv</resource>
+		<resource>andorra30_t2_45.csv</resource>
+		<resource>andorra30_t3_40.csv</resource>
+		<resource>andorra30_t4_35.csv</resource>
+		<resource>andorra30_t5_30.csv</resource>
+		<resource>andorra30_t6_tot.csv</resource>
+	</resources><genes>Y_andorra30.txt</genes>
+	<samples>X_andorra30.txt</samples>
+	<times>F_andorra30.txt</times>
+</dataset>
+
+<dataset description="pirineos29" geneSize="20" id="0018" maxC="30" maxG="20" maxT="7" minC="2" minG="3" minT="3" name="pirineos29" organism="" sampleSize="30" timeSize="7" type="e">
+	<resources separator=";">
+		<resource>pirineos29_t0_mmax.csv</resource>
+		<resource>pirineos29_t1_deptg.csv</resource>
+		<resource>pirineos29_t2_45.csv</resource>
+		<resource>pirineos29_t3_40.csv</resource>
+		<resource>pirineos29_t4_35.csv</resource>
+		<resource>pirineos29_t5_30.csv</resource>
+		<resource>pirineos29_t6_tot.csv</resource>
+	</resources>
+	<genes>Y_pirineos29.txt</genes>
+	<samples>X_pirineos29.txt</samples>
+	<times>F_pirineos29.txt</times>
+</dataset>
+
+<dataset description="pirineos30" geneSize="20" id="0019" maxC="30" maxG="20" maxT="7" minC="2" minG="3" minT="3" name="pirineos30" organism="" sampleSize="30" timeSize="7" type="e">
+	<resources separator=";">
+		<resource>pirineos30_t0_mmax.csv</resource>
+		<resource>pirineos30_t1_deptg.csv</resource>
+		<resource>pirineos30_t2_45.csv</resource>
+		<resource>pirineos30_t3_40.csv</resource>
+		<resource>pirineos30_t4_35.csv</resource>
+		<resource>pirineos30_t5_30.csv</resource>
+		<resource>pirineos30_t6_tot.csv</resource>
+	</resources>
+	<genes>Y_pirineos29.txt</genes>
+	<samples>X_pirineos29.txt</samples>
+	<times>F_pirineos29.txt</times>
+</dataset>
+
+<dataset description="Testing" geneSize="6178" id="0020" maxC="4" maxG="500" maxT="5" minC="2" minG="20" minT="3" name="NewTest" organism="yeast" sampleSize="4" timeSize="5" type="b"><resources separator=";"><resource>yeast_t0.csv</resource><resource>yeast_t1.csv</resource><resource>yeast_t2.csv</resource><resource>yeast_t3.csv</resource><resource>yeast_t4.csv</resource></resources><genes>yeast_genes.txt</genes><samples>yeast_samples.txt</samples><times>yeast_times.txt</times></dataset>
+
+<dataset description="Base paper synthetic - QualityC (Constant, 4th collection)" geneSize="500" id="0021" maxC="6" maxG="200" maxT="4" minC="2" minG="8" minT="2" name="synthetic_qualityc" organism="Synthetic" sampleSize="10" timeSize="4" type="e">
+	<resources separator=",">
+		<resource>synqc_t0.csv</resource>
+		<resource>synqc_t1.csv</resource>
+		<resource>synqc_t2.csv</resource>
+		<resource>synqc_t3.csv</resource>
+	</resources>
+	<genes>synqc_genes.txt</genes>
+	<samples>synqc_samples.txt</samples>
+	<times>synqc_times.txt</times>
+</dataset></trigen>

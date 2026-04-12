@@ -1,0 +1,4 @@
+# For save_results_as_pictures.py
+matplotlib>=3.5
+numpy
+pandas

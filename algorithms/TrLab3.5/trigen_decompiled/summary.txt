@@ -1,0 +1,51 @@
+Summary for TriGenApp.jar
+Decompiled with CFR 0.152
+
+
+org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer
+----------------------------
+
+doOptimize()
+  Unable to fully structure code
+
+
+org.apache.commons.math3.optimization.direct.BOBYQAOptimizer
+----------------------------
+
+bobyqb(double[] double[] )
+  Unable to fully structure code
+
+
+org.apache.commons.math3.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer
+----------------------------
+
+doOptimize()
+  Unable to fully structure code
+
+
+org.apache.commons.math3.optim.nonlinear.scalar.noderiv.BOBYQAOptimizer
+----------------------------
+
+bobyqb(double[] double[] )
+  Unable to fully structure code
+
+
+org.apache.commons.math3.ml.neuralnet.twod.NeuronSquareMesh2D
+----------------------------
+
+createLinks()
+  Unable to fully structure code
+
+
+de.erichseifert.gral.plots.XYPlot
+----------------------------
+
+drawPlot(de.erichseifert.gral.graphics.DrawingContext )
+  Could not resolve type clashes
+
+
+de.erichseifert.gral.ui.InteractivePanel
+----------------------------
+
+a(de.erichseifert.gral.ui.InteractivePanel de.erichseifert.gral.graphics.Drawable java.lang.String java.io.File java.awt.geom.Rectangle2D )
+  Loose catch block
