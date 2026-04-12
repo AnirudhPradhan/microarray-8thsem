@@ -1,0 +1,499 @@
+Number of planted triclusters: 8
+Tricluster coverage: 0.17309999999999998%
+Missing values on dataset: 0.0%
+Noise values on dataset: 0.0%
+Errors on dataset: 0.0%
+
+
+(6, 5, 6), X=[18,24,47,49,51,70], Y=[1,32,44,51,55], Z=[21,29,40,47,58,60], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 21
+X	y1	y32	y44	y51	y55
+x18	4	0	0	2	0
+x24	5	3	6	8	6
+x47	5	4	6	9	7
+x49	4	2	4	7	5
+x51	6	8	9	9	9
+x70	4	0	0	7	3
+
+Context: 29
+X	y1	y32	y44	y51	y55
+x18	0	3	0	3	0
+x24	4	4	7	5	7
+x47	4	5	8	9	8
+x49	1	3	5	4	4
+x51	9	9	9	9	9
+x70	0	3	0	3	2
+
+Context: 40
+X	y1	y32	y44	y51	y55
+x18	0	5	0	0	3
+x24	5	6	3	3	8
+x47	7	9	5	6	8
+x49	3	5	2	1	5
+x51	8	9	9	9	8
+x70	2	5	0	0	3
+
+Context: 47
+X	y1	y32	y44	y51	y55
+x18	0	3	1	1	1
+x24	5	6	4	8	3
+x47	6	8	6	9	5
+x49	4	6	3	7	3
+x51	7	8	7	9	6
+x70	0	3	2	2	3
+
+Context: 58
+X	y1	y32	y44	y51	y55
+x18	2	1	0	1	3
+x24	6	3	5	7	8
+x47	6	6	8	9	8
+x49	4	2	3	7	7
+x51	9	9	9	9	9
+x70	3	1	1	1	6
+
+Context: 60
+X	y1	y32	y44	y51	y55
+x18	0	2	0	4	3
+x24	5	3	4	7	6
+x47	6	5	9	7	8
+x49	4	3	3	6	5
+x51	8	6	9	9	9
+x70	1	3	2	6	4
+
+(6, 6, 5), X=[22,34,50,60,62,64], Y=[7,33,45,56,70,97], Z=[51,57,68,73,82], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 51
+X	y7	y33	y45	y56	y70	y97
+x22	0	0	1	0	1	0
+x34	6	6	4	4	5	1
+x50	8	9	7	6	8	3
+x60	9	9	7	9	8	3
+x62	4	3	3	2	2	1
+x64	6	6	4	5	7	1
+
+Context: 57
+X	y7	y33	y45	y56	y70	y97
+x22	3	1	2	0	1	1
+x34	4	4	3	2	4	3
+x50	5	5	7	5	8	6
+x60	8	7	9	9	9	7
+x62	3	3	3	2	2	2
+x64	5	4	6	3	7	6
+
+Context: 68
+X	y7	y33	y45	y56	y70	y97
+x22	3	0	2	0	2	1
+x34	4	4	3	5	2	4
+x50	9	7	7	5	4	8
+x60	9	7	7	6	8	9
+x62	3	3	3	4	2	3
+x64	5	6	5	5	3	5
+
+Context: 73
+X	y7	y33	y45	y56	y70	y97
+x22	0	1	1	0	3	0
+x34	3	1	4	2	4	3
+x50	6	5	7	5	5	9
+x60	9	6	9	7	9	9
+x62	1	1	3	0	4	1
+x64	3	3	6	3	4	8
+
+Context: 82
+X	y7	y33	y45	y56	y70	y97
+x22	1	0	0	0	1	3
+x34	2	5	5	3	3	5
+x50	6	7	7	7	7	8
+x60	8	7	7	9	9	8
+x62	2	4	1	2	3	4
+x64	3	6	6	6	5	5
+
+(7, 5, 5), X=[6,7,10,11,43,50,54], Y=[27,72,75,83,99], Z=[12,27,38,41,67], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 12
+X	y27	y72	y75	y83	y99
+x6	6	8	6	6	6
+x7	2	3	3	4	4
+x10	0	2	2	3	0
+x11	1	3	3	3	0
+x43	2	3	3	5	5
+x50	1	3	3	3	2
+x54	4	7	3	5	6
+
+Context: 27
+X	y27	y72	y75	y83	y99
+x6	7	9	6	8	9
+x7	2	6	5	4	7
+x10	0	3	1	1	2
+x11	0	3	4	3	6
+x43	5	6	6	6	8
+x50	2	3	4	3	7
+x54	5	9	6	6	9
+
+Context: 38
+X	y27	y72	y75	y83	y99
+x6	9	8	7	9	9
+x7	7	3	3	5	2
+x10	4	0	0	1	1
+x11	5	1	0	2	1
+x43	8	6	3	5	4
+x50	6	2	2	2	2
+x54	8	7	4	7	7
+
+Context: 41
+X	y27	y72	y75	y83	y99
+x6	7	8	6	7	6
+x7	1	7	3	2	2
+x10	1	0	1	0	0
+x11	1	3	1	1	0
+x43	1	7	4	3	3
+x50	1	5	2	2	1
+x54	2	8	4	4	4
+
+Context: 67
+X	y27	y72	y75	y83	y99
+x6	9	7	8	8	8
+x7	3	4	5	5	1
+x10	1	0	0	1	0
+x11	2	2	0	2	1
+x43	4	5	5	6	2
+x50	2	2	4	3	1
+x54	4	6	6	7	2
+
+(7, 5, 8), X=[0,9,10,16,42,58,91], Y=[3,17,22,40,89], Z=[2,6,13,32,56,61,64,95], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 2
+X	y3	y17	y22	y40	y89
+x0	3	8	3	5	6
+x9	3	5	2	4	6
+x10	1	0	0	0	2
+x16	3	8	7	7	7
+x42	1	3	1	1	5
+x58	2	4	1	2	6
+x91	4	8	9	8	7
+
+Context: 6
+X	y3	y17	y22	y40	y89
+x0	7	6	8	3	4
+x9	6	6	7	3	4
+x10	0	0	3	1	0
+x16	9	7	8	5	8
+x42	0	4	4	1	1
+x58	6	5	5	2	3
+x91	9	9	9	9	9
+
+Context: 13
+X	y3	y17	y22	y40	y89
+x0	7	7	4	7	7
+x9	7	6	3	6	6
+x10	2	2	1	0	2
+x16	8	8	8	8	7
+x42	4	2	2	1	4
+x58	6	2	2	5	5
+x91	9	8	9	9	9
+
+Context: 32
+X	y3	y17	y22	y40	y89
+x0	6	6	9	3	8
+x9	5	6	7	2	8
+x10	0	0	1	0	1
+x16	8	8	9	6	8
+x42	3	2	5	1	3
+x58	4	3	5	2	8
+x91	8	8	9	8	9
+
+Context: 56
+X	y3	y17	y22	y40	y89
+x0	3	5	7	8	5
+x9	3	5	7	8	4
+x10	1	0	1	1	2
+x16	6	7	8	8	7
+x42	1	2	5	2	2
+x58	3	5	5	4	2
+x91	7	8	9	9	9
+
+Context: 61
+X	y3	y17	y22	y40	y89
+x0	6	4	7	5	5
+x9	6	3	5	4	3
+x10	2	1	1	0	1
+x16	8	7	7	6	5
+x42	3	2	3	2	1
+x58	5	2	3	2	2
+x91	8	8	9	9	9
+
+Context: 64
+X	y3	y17	y22	y40	y89
+x0	4	3	5	4	6
+x9	2	2	5	4	6
+x10	1	0	0	1	0
+x16	5	7	6	4	6
+x42	1	1	4	2	2
+x58	1	2	4	3	4
+x91	9	9	8	7	7
+
+Context: 95
+X	y3	y17	y22	y40	y89
+x0	5	5	3	7	5
+x9	1	2	2	7	3
+x10	0	0	1	0	0
+x16	5	6	4	8	6
+x42	0	1	1	2	0
+x58	1	1	1	6	1
+x91	9	7	7	8	7
+
+(7, 6, 5), X=[5,6,11,38,75,77,97], Y=[8,24,39,41,77,84], Z=[30,33,52,55,99], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 30
+X	y8	y24	y39	y41	y77	y84
+x5	2	7	3	5	6	7
+x6	0	4	0	1	4	0
+x11	0	7	2	4	6	5
+x38	0	5	0	3	5	4
+x75	0	3	0	1	2	0
+x77	5	9	5	8	9	9
+x97	4	9	3	8	8	8
+
+Context: 33
+X	y8	y24	y39	y41	y77	y84
+x5	7	7	6	7	4	6
+x6	2	2	4	3	1	1
+x11	5	5	5	7	3	5
+x38	3	3	4	6	3	1
+x75	1	1	0	3	1	1
+x77	9	9	8	9	9	8
+x97	8	9	7	9	7	7
+
+Context: 52
+X	y8	y24	y39	y41	y77	y84
+x5	5	7	8	7	5	8
+x6	2	3	3	3	2	3
+x11	5	7	6	5	4	5
+x38	3	6	5	4	3	5
+x75	1	2	0	2	0	1
+x77	9	9	8	8	9	9
+x97	7	8	8	8	6	8
+
+Context: 55
+X	y8	y24	y39	y41	y77	y84
+x5	5	6	7	7	6	7
+x6	3	3	4	3	0	0
+x11	4	5	7	6	5	5
+x38	4	4	4	5	0	3
+x75	0	2	3	2	0	0
+x77	8	7	9	9	8	8
+x97	7	6	8	7	8	7
+
+Context: 99
+X	y8	y24	y39	y41	y77	y84
+x5	8	6	5	8	4	8
+x6	3	5	0	3	1	0
+x11	6	5	4	8	3	5
+x38	5	5	2	5	2	5
+x75	0	1	0	1	0	0
+x77	9	7	7	9	8	8
+x97	8	6	6	9	5	8
+
+(6, 5, 7), X=[22,35,45,46,64,99], Y=[26,64,90,92,96], Z=[4,31,39,53,63,71,75], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 4
+X	y26	y64	y90	y92	y96
+x22	2	5	2	8	5
+x35	4	9	9	9	7
+x45	2	5	0	7	1
+x46	4	9	8	9	7
+x64	0	1	0	2	1
+x99	3	6	4	9	7
+
+Context: 31
+X	y26	y64	y90	y92	y96
+x22	6	7	2	4	5
+x35	8	9	9	8	9
+x45	5	2	2	3	5
+x46	8	9	9	7	8
+x64	3	2	2	1	4
+x99	6	9	5	7	5
+
+Context: 39
+X	y26	y64	y90	y92	y96
+x22	5	3	2	4	4
+x35	9	9	8	9	8
+x45	2	2	1	1	1
+x46	6	6	2	5	8
+x64	1	1	1	0	0
+x99	5	5	2	5	7
+
+Context: 53
+X	y26	y64	y90	y92	y96
+x22	3	4	6	2	5
+x35	9	9	9	9	9
+x45	1	2	2	1	4
+x46	8	7	9	7	8
+x64	1	0	0	1	1
+x99	5	4	8	5	7
+
+Context: 63
+X	y26	y64	y90	y92	y96
+x22	7	3	4	4	3
+x35	9	7	9	7	9
+x45	2	2	2	3	2
+x46	9	7	8	7	4
+x64	2	1	1	1	1
+x99	7	6	7	7	4
+
+Context: 71
+X	y26	y64	y90	y92	y96
+x22	3	1	2	4	6
+x35	9	5	8	9	9
+x45	2	1	1	3	1
+x46	9	5	5	6	9
+x64	1	0	1	3	1
+x99	6	3	2	6	7
+
+Context: 75
+X	y26	y64	y90	y92	y96
+x22	4	1	6	6	5
+x35	9	9	8	9	8
+x45	3	1	5	5	3
+x46	8	9	8	8	6
+x64	3	0	1	2	2
+x99	6	5	6	7	5
+
+(6, 6, 6), X=[3,14,22,23,38,81], Y=[2,38,47,54,65,76], Z=[1,10,36,59,74,98], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 1
+X	y2	y38	y47	y54	y65	y76
+x3	7	6	7	7	9	7
+x14	8	6	9	8	9	8
+x22	5	5	6	7	8	3
+x23	2	3	1	5	5	2
+x38	2	5	6	7	7	3
+x81	0	1	1	1	4	1
+
+Context: 10
+X	y2	y38	y47	y54	y65	y76
+x3	7	8	7	9	7	7
+x14	8	9	8	9	9	7
+x22	7	5	3	7	6	5
+x23	2	3	1	3	0	1
+x38	6	4	1	6	3	4
+x81	0	3	0	3	0	1
+
+Context: 36
+X	y2	y38	y47	y54	y65	y76
+x3	7	4	5	6	8	6
+x14	8	9	6	9	9	6
+x22	7	2	4	5	5	4
+x23	4	2	1	3	2	1
+x38	6	2	2	4	4	2
+x81	3	1	0	2	2	0
+
+Context: 59
+X	y2	y38	y47	y54	y65	y76
+x3	9	5	8	8	8	5
+x14	9	9	9	9	9	6
+x22	5	5	8	5	4	3
+x23	3	3	3	3	2	2
+x38	3	4	4	5	3	3
+x81	2	1	0	1	0	0
+
+Context: 74
+X	y2	y38	y47	y54	y65	y76
+x3	5	8	6	4	7	8
+x14	8	9	6	7	8	8
+x22	1	7	6	4	6	5
+x23	0	2	4	1	4	0
+x38	0	2	4	2	5	5
+x81	0	1	2	0	0	0
+
+Context: 98
+X	y2	y38	y47	y54	y65	y76
+x3	6	9	8	6	9	4
+x14	9	9	9	9	9	9
+x22	5	8	7	5	8	3
+x23	2	0	0	1	6	1
+x38	3	7	4	4	6	1
+x81	2	0	0	0	4	0
+
+(7, 5, 8), X=[46,49,77,80,82,83,91], Y=[4,10,11,19,20], Z=[8,15,54,65,89,91,93,94], RowPattern=OrderPreserving, ColumnPattern=None, ContextPattern=None, %Missings=0, %Noise=0, %Errors=0 PlaidCoherency=None
+
+Context: 8
+X	y4	y10	y11	y19	y20
+x46	8	9	9	9	8
+x49	7	6	6	7	8
+x77	2	1	2	1	4
+x80	1	0	0	0	0
+x82	3	4	6	5	7
+x83	3	2	3	1	5
+x91	2	1	1	0	3
+
+Context: 15
+X	y4	y10	y11	y19	y20
+x46	9	9	4	5	9
+x49	9	7	3	5	7
+x77	4	3	3	1	5
+x80	0	0	0	0	0
+x82	7	7	3	1	6
+x83	7	5	3	1	5
+x91	3	1	0	1	2
+
+Context: 54
+X	y4	y10	y11	y19	y20
+x46	8	9	8	9	8
+x49	7	7	8	8	8
+x77	3	4	3	5	1
+x80	0	0	2	1	0
+x82	7	7	7	7	7
+x83	4	5	6	6	5
+x91	0	3	2	3	0
+
+Context: 65
+X	y4	y10	y11	y19	y20
+x46	9	9	9	9	9
+x49	9	8	7	8	6
+x77	5	5	5	3	2
+x80	0	1	1	0	0
+x82	7	7	6	4	5
+x83	6	7	5	4	4
+x91	2	2	3	1	0
+
+Context: 89
+X	y4	y10	y11	y19	y20
+x46	7	9	9	9	8
+x49	6	8	4	9	8
+x77	4	3	2	7	6
+x80	0	1	0	1	0
+x82	6	5	3	9	7
+x83	5	4	3	8	7
+x91	3	2	0	1	1
+
+Context: 91
+X	y4	y10	y11	y19	y20
+x46	9	9	8	9	6
+x49	5	5	5	8	6
+x77	1	1	2	2	3
+x80	0	0	0	0	0
+x82	4	2	4	6	6
+x83	3	1	3	3	5
+x91	1	0	0	0	3
+
+Context: 93
+X	y4	y10	y11	y19	y20
+x46	8	5	9	9	9
+x49	8	5	7	9	8
+x77	2	0	2	3	2
+x80	0	0	1	1	0
+x82	6	2	5	8	5
+x83	5	2	4	4	2
+x91	1	0	1	3	1
+
+Context: 94
+X	y4	y10	y11	y19	y20
+x46	8	9	9	9	8
+x49	8	8	6	7	8
+x77	2	5	2	4	6
+x80	0	0	0	0	3
+x82	5	7	4	5	8
+x83	4	6	3	5	7
+x91	1	3	0	2	5
+
