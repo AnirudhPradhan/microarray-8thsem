@@ -255,4 +255,18 @@
 	<genes>synqc_genes.txt</genes>
 	<samples>synqc_samples.txt</samples>
 	<times>synqc_times.txt</times>
-</dataset></trigen>
+</dataset>
+
+<dataset description="NEUCOM TriGen synthetic (1000x10x5, constant+ascending-descending)" geneSize="1000" id="0022" maxC="6" maxG="200" maxT="5" minC="2" minG="8" minT="2" name="synthetic_trigen" organism="Synthetic" sampleSize="10" timeSize="5" type="e">
+	<resources separator=",">
+		<resource>syntrig_t0.csv</resource>
+		<resource>syntrig_t1.csv</resource>
+		<resource>syntrig_t2.csv</resource>
+		<resource>syntrig_t3.csv</resource>
+		<resource>syntrig_t4.csv</resource>
+	</resources>
+	<genes>syntrig_genes.txt</genes>
+	<samples>syntrig_samples.txt</samples>
+	<times>syntrig_times.txt</times>
+</dataset>
+</trigen>

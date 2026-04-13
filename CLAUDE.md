@@ -50,6 +50,15 @@ python compute_1d_2d_triq_metrics.py     # TRIQ/GRQ/PEQ/SPQ metrics for 1D/2D re
 python save_results_as_pictures.py       # Generate PNGs → output_images/
 ```
 
+### Benchmark Triclustering (Soares et al. 2024 — 17 datasets)
+```bash
+python algorithms/tricluster/run_benchmark.py      # triCluster on all 17 datasets
+python algorithms/tctricluster/run_benchmark.py    # TCtriCluster (temporal contiguity)
+python algorithms/deltaTrimax/run_benchmark.py     # δ-Trimax on all 17 datasets
+python compute_recoverability_metrics.py           # R/CE/RMS3 vs ground truth (QualityC)
+python generate_final_report.py                    # Regenerate final_comparison_report.md + charts
+```
+
 ## Architecture
 
 ### Data Flow
@@ -69,9 +78,14 @@ Benchmark TSVs ──┘          Hierarchical 1D    →   output_1d_2d/*.md rep
 | `algorithms/neucom-trigen/` | Python | TriGen 2014 paper: synthetic data generation (`synthetic_generator.py`), Yeast GEO download (`data_loader.py`) |
 | `algorithms/TrLab3.5/` | Java | TriGen GUI/CLI runner; configs in `*.tricfg`; outputs `.sol` solution files to `resources/` |
 | `algorithms/G-Tric/` | Java/Maven | Synthetic 3D dataset generator for benchmark experiments |
-| `data/benchmark/` | Data | Benchmark TSV datasets from Soares et al. 2024 (500×10×5, 40 triclusters each variant) — formerly `triclustering-algorithms-assessment/` |
+| `algorithms/tricluster/` | Python | triCluster (Zhao & Zaki 2005): numpy-based exact multiplicative triclustering on all 17 benchmark datasets |
+| `algorithms/tctricluster/` | Python | TCtriCluster: extends triCluster with temporal contiguity (consecutive timepoints only); `tctricluster_numpy.py` overrides `_expand_t` with one-line constraint |
+| `algorithms/deltaTrimax/` | Python | δ-Trimax: 3D Cheng-Church MSR minimisation; `run_benchmark.py` uses pre-formatted `.npy` files from `DeltaTrimax/` subfolders |
+| `data/benchmark/` | Data | Benchmark TSV/NPY datasets from Soares et al. 2024 (500×10×5, ground truth JSON per dataset) |
 | `run_1d_2d_sklearn.py` | Python | Flattens 3D tensors to run 1D/2D sklearn clustering as baselines |
 | `compute_1d_2d_triq_metrics.py` | Python | Computes TRIQ (overall), GRQ (residue), PEQ (Pearson), SPQ (Spearman) |
+| `compute_recoverability_metrics.py` | Python | R/CE/RMS3 recoverability metrics vs QualityC ground truth |
+| `generate_final_report.py` | Python | Regenerates `output/final_comparison_report.md` + all charts from hardcoded results |
 | `save_results_as_pictures.py` | Python | Reads `output_1d_2d/` NPZ/CSV files; generates heatmaps and bar charts |
 
 ### Datasets
@@ -90,8 +104,20 @@ Benchmark TSVs ──┘          Hierarchical 1D    →   output_1d_2d/*.md rep
 
 ### Outputs
 - `output/1d_2d/` — NPZ cluster assignments, CSV summaries, Markdown metrics reports
-- `output/images/` — PNG heatmaps and bar charts
+- `output/images/` — PNG heatmaps and bar charts (including `all_algorithms_R_comparison.png`)
+- `output/final_comparison_report.md` — full comparison report (all 4 tricluster algorithms)
+- `output/recoverability/` — R/CE/RMS3 results vs QualityC ground truth
 - `algorithms/TrLab3.5/resources/` — TriGen `.sol` solution files and TRIQ metric logs
+- `algorithms/tricluster/results/benchmark_results.csv` — triCluster R/CE/RMS3 on all 17 datasets
+- `algorithms/tctricluster/results/benchmark_results.csv` — TCtriCluster results
+- `algorithms/deltaTrimax/results/benchmark_results.csv` — δ-Trimax results
+
+### Benchmark Result Summary (17 datasets × 500×10×5)
+| Algorithm | Mean R (non-OP) | OrderPreserving | Notes |
+|-----------|----------------|-----------------|-------|
+| triCluster | 0.808 | 0.000 | Exact multiplicative windows |
+| TCtriCluster | 0.761 | 0.000 | Same + temporal contiguity constraint |
+| δ-Trimax | ~0.21 | ~0.03 | Greedy MSR, δ=var×0.005, λ=1.2 |
 
 ## Documentation Files
 - `docs/DATASET_SUMMARY.md` — maps papers to datasets
