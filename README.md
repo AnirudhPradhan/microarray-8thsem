@@ -1,4 +1,4 @@
-# Triclustering Algorithms for Temporal Gene Expression Analysis
+# Tricluster: An Effective Algorithm for Mining Coherent Clusters in 3D Microarray Data   
 
 Replication and benchmarking of **six clustering algorithms** (1D → 2D → 3D) on temporal gene expression tensors (genes × conditions × timepoints).
 
