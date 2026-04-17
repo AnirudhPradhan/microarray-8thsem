@@ -1,0 +1,6 @@
+Algorithm,Dataset,n_triclusters,TRIQ Best,TRIQ Mean,GRQ,PEQ,SPQ
+triCluster,QualityC,48,1.0,0.603,0.576,0.452,0.854
+TCtriCluster,QualityC,20,0.71,0.504,0.514,0.473,0.823
+delta-Trimax,QualityC,50,1.0,0.893,0.874,0.461,0.761
+TCtriCluster,Yeast,5,0.818,0.678,0.768,0.356,0.374
+delta-Trimax,Yeast,16,0.937,0.81,0.862,0.593,0.594
