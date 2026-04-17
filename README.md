@@ -3,8 +3,8 @@
 Replication and benchmarking of **six clustering algorithms** (1D → 2D → 3D) on temporal gene expression tensors (genes × conditions × timepoints).
 
 Implements and compares:
-- **NEUCOM TriGen (2014)** — Gutiérrez-Avilés et al., genetic algorithm triclustering
-- **Soares et al. Benchmark (2024)** — comprehensive comparison of triCluster, TCtriCluster, and δ-Trimax across 17 datasets
+- **[NEUCOM TriGen (2014)](papers/NEUCOM_TriGen_PUBLISHED-reference.pdf)** — Gutiérrez-Avilés et al., genetic algorithm triclustering
+- **[Soares et al. Benchmark (2024)](papers/basepaper-implementation.pdf)** — comprehensive comparison of triCluster, TCtriCluster, and δ-Trimax across 17 datasets
 
 ---
 
