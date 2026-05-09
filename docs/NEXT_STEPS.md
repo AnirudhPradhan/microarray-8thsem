@@ -161,6 +161,48 @@ No algorithm wins both. A post-processing MSR refinement on triCluster results c
 ## Priority Order
 
 1. **Option 2 (MSR post-refinement)** — quickest win, directly fixes the TRIQ vs R gap
-2. **Option 1 (Adaptive winsz)** — straightforward parameter tuning, big R gain on noisy datasets
+2. ~~**Option 1 (Adaptive winsz)**~~ — attempted, see findings below
 3. **Option 3 (OrderPreserving)** — most novel contribution, currently zero coverage across 4 datasets
-4. **Option 4 (Hybrid)** — most complex, do after 1+2 are validated
+4. **Option 4 (Hybrid)** — most complex, do after 2 is validated
+
+---
+
+## Gap 2 — Adaptive Winsz: Experiment Results
+
+**Status: Attempted — net negative, revising expectations**
+
+### What was implemented
+`algorithms/tricluster/adaptive_winsz.py` — computes per-dataset window size from
+the tightest multiplicative window covering 10% of genes per condition pair.
+
+`algorithms/tricluster/run_benchmark_adaptive.py` — full benchmark runner using
+adaptive winsz instead of fixed 0.03.
+
+### Results
+
+| Group | Baseline R | Adaptive R | Delta |
+|:------|:----------:|:----------:|:-----:|
+| Quality datasets (3) | 0.566 | 0.574 | +0.008 |
+| Clean structured (10) | 0.911 | 0.875 | -0.036 |
+| All non-OP (13) | 0.831 | 0.806 | -0.026 |
+
+### Why it failed
+The adaptive formula cannot distinguish "noisy planted cluster (needs wider window)"
+from "diverse background patterns (needs narrow window)". Both produce wide ratio
+spread. BaseR and Contiguity datasets receive winsz~0.15, adding false positives
+that hurt the precision-oriented R metric.
+
+### Why Quality R cannot reach 0.75
+Quality datasets have two types of damage:
+- **Value noise** (10%): genes displaced in ratio space — fixable with wider window
+- **Structural errors** (5%): cells randomly removed from planted clusters — NOT fixable
+
+Structural errors set a hard ceiling on achievable R at ~0.62–0.65 regardless of
+window size. The original expectation of 0.56 → 0.75 was too optimistic.
+
+### Revised Gap 2 assessment
+- Maximum achievable improvement on Quality datasets: ~+3–4% R
+- Any approach that widens the window globally degrades clean datasets by ~4–9%
+- Net effect is negative — not worth pursuing further without a smarter noise detector
+
+**Next: proceed to Gap 3 (MSR post-refinement)**
